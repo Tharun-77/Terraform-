@@ -218,3 +218,54 @@ terraform destroy
 
 > ✅ This workflow helps you safely manage and automate infrastructure across multiple environments.
 
+# 📁 Terraform Project: Create Text File with some content
+
+This Terraform configuration to a local text file named `output.txt`.
+
+---
+
+## 📂 Terraform Configuration – `main.tf`
+
+```hcl
+# Create a local file with the random content
+resource "local_file" "example_file" {
+  content  = "Hello Good evening to everyone"
+  filename = "${path.module}/output.txt"
+}
+```
+
+---
+
+## 🚀 Getting Started
+
+## ⚙️ Terraform Commands
+
+### Initialize Terraform
+```bash
+terraform init
+```
+
+### Apply Configuration
+```bash
+terraform apply
+```
+Type `yes` when prompted.
+
+---
+
+## 📄 Output
+
+A file named `output.txt` will be created with content like:
+
+```
+Here is some random content: clever-dog
+```
+
+---
+
+## 🧹 Destroy Resources
+```bash
+terraform destroy
+```
+
+---
