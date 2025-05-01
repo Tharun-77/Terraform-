@@ -101,3 +101,120 @@ Terraform v1.7.5
 - [Terraform GitHub](https://github.com/hashicorp/terraform)
 
 ---
+
+
+
+# ⚙️ Terraform Workflow
+
+Terraform follows a simple and predictable **Infrastructure as Code (IaC)** lifecycle. Here's the complete Terraform workflow from start to finish:
+
+---
+
+## 1️⃣ Write – Create Configuration
+
+Write infrastructure code using **`.tf`** files in the HashiCorp Configuration Language (HCL).
+
+Example:
+```hcl
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+}
+```
+
+---
+
+## 2️⃣ Initialize – `terraform init`
+
+Initialize your working directory. This installs the provider plugins (like AWS, Azure, etc.).
+```bash
+terraform init
+```
+
+---
+
+## 3️⃣ Format and Validate
+
+**Format code** for consistency:
+```bash
+terraform fmt
+```
+
+**Validate the configuration** for syntax errors:
+```bash
+terraform validate
+```
+
+---
+
+## 4️⃣ Plan – `terraform plan`
+
+Creates an execution plan showing what Terraform will do without making any changes.
+```bash
+terraform plan
+```
+
+This helps review the changes Terraform will apply before actually applying them.
+
+---
+
+## 5️⃣ Apply – `terraform apply`
+
+Applies the changes required to reach the desired infrastructure state.
+```bash
+terraform apply
+```
+
+You’ll be asked to confirm with `yes` before proceeding.
+
+---
+
+## 6️⃣ (Optional) Show – `terraform show`
+
+Displays the current state and output of the resources.
+```bash
+terraform show
+```
+
+---
+
+## 7️⃣ (Optional) Output – `terraform output`
+
+Retrieves output variables defined in the configuration.
+```bash
+terraform output
+```
+
+---
+
+## 8️⃣ Destroy – `terraform destroy`
+
+Tears down and removes all the infrastructure Terraform manages.
+```bash
+terraform destroy
+```
+
+---
+
+## 📌 Terraform Workflow Summary
+
+| Step       | Command             | Purpose                                   |
+|------------|---------------------|-------------------------------------------|
+| Write      | `.tf` files          | Define infrastructure                     |
+| Initialize | `terraform init`     | Setup working directory and plugins       |
+| Format     | `terraform fmt`      | Format configuration files                |
+| Validate   | `terraform validate` | Check for syntax/config errors            |
+| Plan       | `terraform plan`     | Preview what changes Terraform will make  |
+| Apply      | `terraform apply`    | Apply the actual infrastructure changes   |
+| Show       | `terraform show`     | View current state                        |
+| Output     | `terraform output`   | Display outputs defined in configuration  |
+| Destroy    | `terraform destroy`  | Remove infrastructure                     |
+
+---
+
+> ✅ This workflow helps you safely manage and automate infrastructure across multiple environments.
+
