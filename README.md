@@ -269,3 +269,143 @@ terraform destroy
 ```
 
 ---
+
+
+# ☁️ AWS CLI Installation Guide
+
+The AWS Command Line Interface (CLI) is a tool to manage AWS services via terminal commands.
+
+---
+
+## 🐧 Install AWS CLI on Ubuntu (Linux)
+
+### Step 1: Download AWS CLI v2 Installer
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+```
+
+### Step 2: Unzip the Installer
+```bash
+unzip awscliv2.zip
+```
+
+### Step 3: Run the Installer
+```bash
+sudo ./aws/install
+```
+
+### Step 4: Verify Installation
+```bash
+aws --version
+```
+
+✅ Output should be something like: `aws-cli/2.x.x Python/...`
+
+---
+
+## 🪟 Install AWS CLI on Windows
+
+### Option 1: Using Installer (Recommended)
+1. Download the MSI installer from:  
+   👉 [AWS CLI v2 MSI (64-bit)](https://awscli.amazonaws.com/AWSCLIV2.msi)
+
+2. Run the installer.
+
+3. Open Command Prompt or PowerShell and verify:
+```powershell
+aws --version
+```
+
+---
+
+## 🍏 Install AWS CLI on macOS
+
+### Step 1: Download Installer
+```bash
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+```
+
+### Step 2: Run the Installer
+```bash
+sudo installer -pkg AWSCLIV2.pkg -target /
+```
+
+### Step 3: Verify Installation
+```bash
+aws --version
+```
+
+---
+
+## 🔐 (Optional) Configure AWS CLI
+
+After installing, set up your credentials:
+
+```bash
+aws configure
+```
+
+You’ll be prompted for:
+
+- AWS Access Key ID
+- AWS Secret Access Key
+- Default region (e.g., `us-east-1`)
+- Default output format (e.g., `json`)
+
+---
+
+## 🧹 Uninstall AWS CLI
+
+### Ubuntu:
+```bash
+sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
+sudo rm -rf /usr/local/aws-cli
+sudo rm /usr/local/bin/aws
+```
+
+### Windows:
+Use **Add/Remove Programs** to uninstall AWS CLI.
+
+### macOS:
+```bash
+sudo rm -rf /usr/local/aws-cli
+sudo rm /usr/local/bin/aws
+```
+
+---
+
+## 📚 Official Docs
+
+- [AWS CLI User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)
+- [AWS CLI GitHub Repo](https://github.com/aws/aws-cli)
+
+---
+
+> ☁️ Manage AWS from your terminal like a pro!
+
+---
+
+
+# 📁 Terraform Project: Creating a S3 Bucket in aws cloud using terraform
+
+The terraform configuration is given inside the aws_s3_bucket folder
+
+---
+
+After taking the clone of project move inside the aws_s3_bucket folder and run this commands
+
+As we have already conected to our aws serever using aws cli now we can simply run
+
+```bash
+terraform init 
+terraform fmt
+terraform validate
+terraform plan
+terrafrom apply
+```
+
+After following above steps you can achive a aws s3 bucket inside your aws cloude server
+
+---
+
+
