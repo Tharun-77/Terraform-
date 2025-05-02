@@ -431,7 +431,7 @@ Type `yes` to confirm.
 
 ## ✅ Output
 
-An S3 bucket named `my-unique-bucket-name-12345` (or the name you used) will be created in AWS.
+An S3 bucket named `bucket_in_aws` (or the name you used) will be created in AWS.
 
 ---
 
