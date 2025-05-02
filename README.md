@@ -394,17 +394,53 @@ The terraform configuration is given inside the aws_s3_bucket folder
 
 After taking the clone of project move inside the aws_s3_bucket folder and run this commands
 
-As we have already conected to our aws serever using aws cli now we can simply run
+## ☁️ Prerequisites
 
+- AWS account
+- AWS Access and Secret keys
+- AWS CLI installed and configured
+- Terraform installed
+
+---
+
+## ⚙️ Terraform Commands to Create S3 Bucket
+
+### Step 1: Initialize Terraform
 ```bash
-terraform init 
-terraform fmt
-terraform validate
-terraform plan
-terrafrom apply
+terraform init
 ```
 
-After following above steps you can achive a aws s3 bucket inside your aws cloude server
+### Step 2: Format and Validate (Optional)
+```bash
+terraform fmt
+terraform validate
+```
+
+### Step 3: Review the Plan
+```bash
+terraform plan
+```
+
+### Step 4: Apply the Configuration
+```bash
+terraform apply
+```
+Type `yes` to confirm.
+
+---
+
+## ✅ Output
+
+An S3 bucket named `my-unique-bucket-name-12345` (or the name you used) will be created in AWS.
+
+---
+
+## 🧹 Destroy the Bucket (Cleanup)
+
+To delete the bucket and all related resources:
+```bash
+terraform destroy
+```
 
 ---
 
