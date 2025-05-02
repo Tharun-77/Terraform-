@@ -9,13 +9,13 @@ This guide helps you install **Terraform** on **Ubuntu (Linux)**, **Windows**, a
 
 ---
 
-# 🌍 Terraform Installation Guide
+# Terraform Installation Guide
 
 This guide helps you install **Terraform** on **Ubuntu (Linux)**, **Windows**, and **macOS**.
 
 ---
 
-## 🐧 Ubuntu (Linux) Installation
+## Ubuntu (Linux) Installation
 
 ### Step 1: Update System Packages
 ```bash
@@ -50,7 +50,7 @@ terraform -v
 
 ---
 
-## 🪟 Windows Installation
+## Windows Installation
 
 ### Step 1: Download Terraform
 - Visit the [Terraform Downloads Page](https://developer.hashicorp.com/terraform/downloads)
@@ -69,7 +69,7 @@ terraform -v
 
 ---
 
-## 🍏 macOS Installation
+## macOS Installation
 
 ### Step 1: Install Homebrew (if not already installed)
 ```bash
@@ -89,14 +89,14 @@ terraform -v
 
 ---
 
-## ✅ Sample Output
+## Sample Output
 ```
 Terraform v1.7.5
 ```
 
 ---
 
-## 📚 Resources
+## Resources
 - [Terraform Documentation](https://developer.hashicorp.com/terraform/docs)
 - [Terraform GitHub](https://github.com/hashicorp/terraform)
 
@@ -104,13 +104,13 @@ Terraform v1.7.5
 
 
 
-# ⚙️ Terraform Workflow
+# Terraform Workflow
 
 Terraform follows a simple and predictable **Infrastructure as Code (IaC)** lifecycle. Here's the complete Terraform workflow from start to finish:
 
 ---
 
-## 1️⃣ Write – Create Configuration
+## 1. Write – Create Configuration
 
 Write infrastructure code using **`.tf`** files in the HashiCorp Configuration Language (HCL).
 
@@ -128,7 +128,7 @@ resource "aws_instance" "example" {
 
 ---
 
-## 2️⃣ Initialize – `terraform init`
+## 2. Initialize – `terraform init`
 
 Initialize your working directory. This installs the provider plugins (like AWS, Azure, etc.).
 ```bash
@@ -137,7 +137,7 @@ terraform init
 
 ---
 
-## 3️⃣ Format and Validate
+## 3. Format and Validate
 
 **Format code** for consistency:
 ```bash
@@ -151,7 +151,7 @@ terraform validate
 
 ---
 
-## 4️⃣ Plan – `terraform plan`
+## 4. Plan – `terraform plan`
 
 Creates an execution plan showing what Terraform will do without making any changes.
 ```bash
@@ -162,7 +162,7 @@ This helps review the changes Terraform will apply before actually applying them
 
 ---
 
-## 5️⃣ Apply – `terraform apply`
+## 5. Apply – `terraform apply`
 
 Applies the changes required to reach the desired infrastructure state.
 ```bash
@@ -173,7 +173,7 @@ You’ll be asked to confirm with `yes` before proceeding.
 
 ---
 
-## 6️⃣ (Optional) Show – `terraform show`
+## 6. (Optional) Show – `terraform show`
 
 Displays the current state and output of the resources.
 ```bash
@@ -182,7 +182,7 @@ terraform show
 
 ---
 
-## 7️⃣ (Optional) Output – `terraform output`
+## 7. (Optional) Output – `terraform output`
 
 Retrieves output variables defined in the configuration.
 ```bash
@@ -191,7 +191,7 @@ terraform output
 
 ---
 
-## 8️⃣ Destroy – `terraform destroy`
+## 8. Destroy – `terraform destroy`
 
 Tears down and removes all the infrastructure Terraform manages.
 ```bash
@@ -200,7 +200,7 @@ terraform destroy
 
 ---
 
-## 📌 Terraform Workflow Summary
+##  Terraform Workflow Summary
 
 | Step       | Command             | Purpose                                   |
 |------------|---------------------|-------------------------------------------|
@@ -216,15 +216,15 @@ terraform destroy
 
 ---
 
-> ✅ This workflow helps you safely manage and automate infrastructure across multiple environments.
+>  This workflow helps you safely manage and automate infrastructure across multiple environments.
 
-# 📁 Terraform Project: Create Text File with some content
+#  Terraform Project: Create Text File with some content
 
 This Terraform configuration to a local text file named `output.txt`.
 
 ---
 
-## 📂 Terraform Configuration – `main.tf`
+##  Terraform Configuration – `main.tf`
 
 ```hcl
 # Create a local file with the random content
@@ -236,9 +236,9 @@ resource "local_file" "example_file" {
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
-## ⚙️ Terraform Commands
+##  Terraform Commands
 
 ### Initialize Terraform
 ```bash
@@ -253,7 +253,7 @@ Type `yes` when prompted.
 
 ---
 
-## 📄 Output
+##  Output
 
 A file named `output.txt` will be created with content like:
 
@@ -263,7 +263,7 @@ Here is some random content: clever-dog
 
 ---
 
-## 🧹 Destroy Resources
+##  Destroy Resources
 ```bash
 terraform destroy
 ```
@@ -271,13 +271,13 @@ terraform destroy
 ---
 
 
-# ☁️ AWS CLI Installation Guide
+# AWS CLI Installation Guide
 
 The AWS Command Line Interface (CLI) is a tool to manage AWS services via terminal commands.
 
 ---
 
-## 🐧 Install AWS CLI on Ubuntu (Linux)
+## Install AWS CLI on Ubuntu (Linux)
 
 ### Step 1: Download AWS CLI v2 Installer
 ```bash
@@ -299,7 +299,7 @@ sudo ./aws/install
 aws --version
 ```
 
-✅ Output should be something like: `aws-cli/2.x.x Python/...`
+ Output should be something like: `aws-cli/2.x.x Python/...`
 
 ---
 
@@ -307,7 +307,7 @@ aws --version
 
 ### Option 1: Using Installer (Recommended)
 1. Download the MSI installer from:  
-   👉 [AWS CLI v2 MSI (64-bit)](https://awscli.amazonaws.com/AWSCLIV2.msi)
+    [AWS CLI v2 MSI (64-bit)](https://awscli.amazonaws.com/AWSCLIV2.msi)
 
 2. Run the installer.
 
@@ -318,7 +318,7 @@ aws --version
 
 ---
 
-## 🍏 Install AWS CLI on macOS
+## Install AWS CLI on macOS
 
 ### Step 1: Download Installer
 ```bash
@@ -337,7 +337,7 @@ aws --version
 
 ---
 
-## 🔐 (Optional) Configure AWS CLI
+##  (Optional) Configure AWS CLI
 
 After installing, set up your credentials:
 
@@ -354,7 +354,7 @@ You’ll be prompted for:
 
 ---
 
-## 🧹 Uninstall AWS CLI
+## Uninstall AWS CLI
 
 ### Ubuntu:
 ```bash
@@ -374,19 +374,19 @@ sudo rm /usr/local/bin/aws
 
 ---
 
-## 📚 Official Docs
+## Official Docs
 
 - [AWS CLI User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)
 - [AWS CLI GitHub Repo](https://github.com/aws/aws-cli)
 
 ---
 
-> ☁️ Manage AWS from your terminal like a pro!
+>  Manage AWS from your terminal like a pro!
 
 ---
 
 
-# 📁 Terraform Project: Creating a S3 Bucket in aws cloud using terraform
+# Terraform Project: Creating a S3 Bucket in aws cloud using terraform
 
 The terraform configuration is given inside the aws_s3_bucket folder
 
@@ -394,7 +394,7 @@ The terraform configuration is given inside the aws_s3_bucket folder
 
 After taking the clone of project move inside the aws_s3_bucket folder and run this commands
 
-## ☁️ Prerequisites
+##  Prerequisites
 
 - AWS account
 - AWS Access and Secret keys
@@ -403,7 +403,7 @@ After taking the clone of project move inside the aws_s3_bucket folder and run t
 
 ---
 
-## ⚙️ Terraform Commands to Create S3 Bucket
+##  Terraform Commands to Create S3 Bucket
 
 ### Step 1: Initialize Terraform
 ```bash
@@ -429,13 +429,13 @@ Type `yes` to confirm.
 
 ---
 
-## ✅ Output
+## Output
 
 An S3 bucket named `bucket_in_aws` (or the name you used) will be created in AWS.
 
 ---
 
-## 🧹 Destroy the Bucket (Cleanup)
+## Destroy the Bucket (Cleanup)
 
 To delete the bucket and all related resources:
 ```bash
